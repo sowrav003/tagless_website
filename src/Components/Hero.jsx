@@ -11,7 +11,7 @@ const Hero = () => {
         <h1 className="vm-hero-title anim-in delay-2">
           Manufacture Your
           <br />
-          <em>Clothing Brand</em>
+          <em className="vm-em-text">Clothing Brand</em>
           <br />
           With Us
         </h1>

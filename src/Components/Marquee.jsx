@@ -1,7 +1,7 @@
 import React from 'react'
 
 const Marquee = () => {
-    const marqueeItems = ['Ethical Manufacturing', 'Premium Fabrics', 'Low MOQ', 'Global Shipping', 'OEKO-TEX Certified', 'WRAP Platinum', 'Fast Turnaround', 'Custom Branding'];
+    const marqueeItems = ['PRIVATE LABEL', 'CUSTOM LABELS', 'LOW MOQ', 'OEM/ODM', 'FAST SAMPLING', 'EXPORT QUALITY', 'BULK PRODUCTION', 'SUSTAINABLE SOURCING'];
   return (
           <div className="vm-marquee-bar">
         <div className="vm-marquee-inner">

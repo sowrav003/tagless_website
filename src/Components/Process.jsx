@@ -14,11 +14,11 @@ const Process = () => {
         <div className="vm-section">
           <div className="vm-process-header">
             <div>
-              <div className="vm-section-label" style={{color:'var(--bronze)'}}>Our Methodology</div>
-              <h2 className="vm-process-title">From Raw Yarn to<br /><em style={{fontStyle:'italic'}}>Retail-Ready</em> Goods</h2>
+              <div className="vm-section-label" style={{color:'var(--bronze)'}}>Our Process</div>
+              <h2 className="vm-process-title">From Idea to<br /><em style={{fontStyle:'italic'}}>Finished</em> Product</h2>
             </div>
             <p className="vm-process-desc">
-              Transparent communication at every stage of the production cycle ensures your vision is realized on time and on spec.
+              We keep production simple, transparent, and reliable—so your brand gets premium garments delivered on time.
             </p>
           </div>
           <div className="vm-process-steps">

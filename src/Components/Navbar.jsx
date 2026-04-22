@@ -36,7 +36,10 @@ const Navbar = () => {
       {menuOpen && (
         <div className="vm-mobile-menu">
           {["Products", "Process", "About", "Gallery", "Contact"].map((l) => (
-            <button key={l} onClick={() => scrollTo(l.toLowerCase())}>
+            <button key={l} onClick={() => {
+              scrollTo(l.toLowerCase());
+              setMenuOpen(false);
+            }}>
               {l}
             </button>
           ))}

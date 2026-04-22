@@ -8,7 +8,7 @@ const Gallery = () => {
           <div style={{display:'flex', justifyContent:'space-between', alignItems:'flex-end', marginBottom:'0.5rem'}}>
             <div>
               <div className="vm-section-label">Production Showcase</div>
-              <h2 className="vm-section-title">Inside the <em>Factory</em></h2>
+              <h2 className="vm-section-title">Inside <em>TAGLESS</em> Production</h2>
             </div>
             <button style={{background:'none',border:'none',cursor:'pointer',display:'flex',alignItems:'center',gap:8,fontSize:10,fontWeight:600,letterSpacing:'0.25em',textTransform:'uppercase',color:'var(--muted)'}}>
               Full Portfolio <ArrowUpRight size={14} />

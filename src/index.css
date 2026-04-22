@@ -136,7 +136,7 @@ body {
   color: var(--ink);
   margin-bottom: 2rem;
 }
-.vm-hero-title em {
+.vm-em-text {
   font-style: italic;
   color: var(--bronze);
 }
@@ -466,7 +466,7 @@ body {
 
 .vm-process-section {
   padding: 8rem 0;
-  background: var(--ink);
+  background: #181515;
 }
 .vm-process-header {
   display: grid;
@@ -479,12 +479,12 @@ body {
   font-family: "Cormorant Garamond", serif;
   font-size: clamp(2.8rem, 4vw, 4rem);
   font-weight: 300;
-  color: var(--ivory);
+  color: #fff;
   line-height: 1.1;
 }
 .vm-process-desc {
   font-size: 13px;
-  color: #a09890;
+  color: #dfdfdf;
   line-height: 1.75;
   letter-spacing: 0.02em;
   max-width: 400px;
@@ -496,13 +496,11 @@ body {
 }
 .vm-step {
   padding: 2.5rem 2rem;
-  border-left: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid white;
   transition: background 0.3s;
   position: relative;
 }
-.vm-step:first-child {
-  border-left: none;
-}
+
 .vm-step:hover {
   background: rgba(255, 255, 255, 0.04);
 }
@@ -510,7 +508,7 @@ body {
   font-family: "Cormorant Garamond", serif;
   font-size: 4rem;
   font-weight: 300;
-  color: rgba(176, 141, 87, 0.2);
+  color: #fff;
   line-height: 1;
   margin-bottom: 1.25rem;
   display: block;
@@ -531,7 +529,7 @@ body {
 }
 .vm-step-desc {
   font-size: 12px;
-  color: #706860;
+  color: #979494;
   line-height: 1.65;
 }
 
@@ -753,6 +751,11 @@ body {
   gap: 4rem;
   margin-bottom: 5rem;
 }
+.vm-footer-img {
+  width: 40px;
+  height: 40px;
+  padding: 6px;
+}
 .vm-footer-brand {
   font-family: "Cormorant Garamond", serif;
   font-size: 1.1rem;
@@ -766,7 +769,7 @@ body {
 .vm-footer-mark {
   width: 28px;
   height: 28px;
-  background: var(--bronze);
+  background: white;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -780,7 +783,7 @@ body {
 }
 .vm-footer-tagline {
   font-size: 12px;
-  color: #706860;
+  color: #cccbcb;
   line-height: 1.75;
   max-width: 260px;
 }
@@ -789,7 +792,7 @@ body {
   font-weight: 600;
   letter-spacing: 0.3em;
   text-transform: uppercase;
-  color: #504840;
+  color: #d6d6d6;
   margin-bottom: 1.5rem;
 }
 .vm-footer-links {
@@ -807,7 +810,7 @@ body {
   font-weight: 500;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: #a09890;
+  color: #a1a1a1;
   transition: color 0.2s;
 }
 .vm-footer-links button:hover {
@@ -829,9 +832,9 @@ body {
   border-top: 1px solid rgba(255, 255, 255, 0.06);
   padding-top: 2rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  font-size: 9px;
+  font-size: 0.7rem;
   font-weight: 500;
   letter-spacing: 0.2em;
   text-transform: uppercase;

@@ -8,11 +8,13 @@ const Footer = () => {
           <div className="vm-footer-grid">
             <div>
               <div className="vm-footer-brand">
-                <div className="vm-footer-mark"><span>VM</span></div>
-                VANTAGE MFG
+                <div className="vm-footer-mark">
+                  <img src="/logo.png" alt="TAGLESS Logo" className='vm-footer-img'/>
+                </div>
+                TAGLESS
               </div>
               <p className="vm-footer-tagline">
-                Ethical manufacturing and global supply chain excellence for the next generation of premium fashion labels.
+                Modern clothing sourcing partner helping brands build premium apparel with reliable quality, low MOQ options, and smooth delivery
               </p>
             </div>
             <div>
@@ -26,27 +28,27 @@ const Footer = () => {
             <div>
               <div className="vm-footer-heading">Contact</div>
               <ul className="vm-footer-links">
-                <li><button>wholesale@vantage-mfg.com</button></li>
+                <li><button>tagless.official@gmail.com</button></li>
                 <li><button>+880 1XXX-XXXXXX</button></li>
                 <li><button>Dhaka, Bangladesh</button></li>
               </ul>
             </div>
-            <div>
+            {/* <div>
               <div className="vm-footer-heading">Certifications</div>
               <div className="vm-footer-certs">
                 {['OEKO-TEX Standard 100','WRAP Platinum','GOTS Organic','ISO 9001:2015'].map(c => (
                   <div key={c} className="vm-cert">{c}</div>
                 ))}
               </div>
-            </div>
+            </div> */}
           </div>
           <div className="vm-footer-bottom">
-            <p>© 2025 Vantage Manufacturing. All rights reserved.</p>
-            <div className="vm-footer-social">
+            <p>© 2026 TAGLESS. All rights reserved.</p>
+            {/* <div className="vm-footer-social">
               <a href="#">Instagram</a>
               <a href="#">LinkedIn</a>
               <a href="#">WhatsApp</a>
-            </div>
+            </div> */}
           </div>
         </div>
       </footer>
