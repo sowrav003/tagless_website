@@ -1,0 +1,984 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --ink: #0b0b0b;
+  --ivory: #f6f2eb;
+  --warm: #ede8df;
+  --bronze: #b08d57;
+  --muted: #787068;
+  --border: #d8d2c8;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background: var(--ivory);
+  color: var(--ink);
+  font-family: "Jost", sans-serif;
+}
+
+.vm-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: rgba(246, 242, 235, 0.92);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border);
+  transition: all 0.3s ease;
+}
+.vm-nav-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2.5rem;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.vm-logo {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.25rem;
+  letter-spacing: 0.18em;
+  font-weight: 600;
+  color: var(--ink);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+}
+.vm-logo-mark {
+  width: 32px;
+  height: 32px;
+  background: var(--ink);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.vm-logo-img {
+  width: 40px;
+  height: 40px;
+}
+.vm-nav-links {
+  display: flex;
+  gap: 2.5rem;
+}
+.vm-nav-links button {
+  font-family: "Jost", sans-serif;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--muted);
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+.vm-nav-links button:hover {
+  color: var(--ink);
+}
+.vm-hamburger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--ink);
+}
+
+.vm-hero {
+  min-height: 80vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  overflow: hidden;
+}
+.vm-hero-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 8rem 4rem 5rem 4rem;
+  background: var(--ivory);
+  position: relative;
+  z-index: 2;
+}
+.vm-hero-eyebrow {
+  font-family: "Jost";
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--bronze);
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.vm-hero-eyebrow::before {
+  content: "";
+  display: block;
+  width: 32px;
+  height: 1px;
+  background: var(--bronze);
+}
+.vm-hero-title {
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(3.5rem, 5vw, 5.5rem);
+  font-weight: 300;
+  line-height: 1.05;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  margin-bottom: 2rem;
+}
+.vm-hero-title em {
+  font-style: italic;
+  color: var(--bronze);
+}
+.vm-hero-sub {
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--muted);
+  line-height: 1.7;
+  max-width: 400px;
+  margin-bottom: 3rem;
+  letter-spacing: 0.02em;
+}
+.vm-hero-ctas {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.vm-btn-primary {
+  background: var(--ink);
+  color: var(--ivory);
+  border: none;
+  cursor: pointer;
+  padding: 1rem 2.5rem;
+  font-family: "Jost";
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  transition: background 0.25s;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.vm-btn-primary:hover {
+  background: #3b6b48;
+}
+.vm-btn-secondary {
+  background: transparent;
+  color: var(--ink);
+  border: 1px solid var(--border);
+  cursor: pointer;
+  padding: 1rem 2.5rem;
+  font-family: "Jost";
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  transition:
+    border-color 0.25s,
+    background 0.25s;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.vm-btn-secondary:hover {
+  border-color: var(--ink);
+  background: var(--warm);
+}
+.vm-hero-stats {
+  margin-top: 4rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border);
+  display: flex;
+  gap: 3rem;
+}
+.vm-stat-num {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--ink);
+  line-height: 1;
+  margin-bottom: 4px;
+}
+.vm-stat-label {
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.vm-hero-right {
+  position: relative;
+  overflow: hidden;
+}
+.vm-hero-right img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  filter: saturate(0.85) contrast(1.05);
+  transition: transform 8s ease;
+}
+.vm-hero-right:hover img {
+  transform: scale(1.03);
+}
+.vm-hero-overlay {
+  position: absolute;
+  bottom: 3rem;
+  right: 3rem;
+  background: rgba(246, 242, 235, 0.9);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--border);
+  padding: 1.25rem 1.5rem;
+  font-family: "Jost";
+}
+.vm-hero-overlay p:first-child {
+  font-size: 9px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 4px;
+}
+.vm-hero-overlay p:last-child {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--ink);
+}
+
+.vm-marquee-bar {
+  background: var(--ink);
+  color: var(--ivory);
+  padding: 1rem 0;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.vm-marquee-inner {
+  display: inline-flex;
+  gap: 4rem;
+  animation: marquee 20s linear infinite;
+}
+.vm-marquee-inner span {
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+}
+.vm-marquee-dot {
+  color: var(--bronze);
+}
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.vm-section {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2.5rem;
+}
+.vm-section-label {
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--bronze);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 1.25rem;
+}
+.vm-section-label::after {
+  content: "";
+  flex: 0 0 24px;
+  height: 1px;
+  background: var(--bronze);
+}
+.vm-section-title {
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(2.5rem, 3.5vw, 3.8rem);
+  font-weight: 300;
+  line-height: 1.1;
+  color: var(--ink);
+}
+.vm-section-title em {
+  font-style: italic;
+}
+
+.vm-about {
+  padding: 8rem 0;
+  background: var(--ivory);
+}
+.vm-about-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 6rem;
+  align-items: center;
+}
+.vm-about-img-wrap {
+  position: relative;
+}
+.vm-about-img {
+  width: 100%;
+  height: 580px;
+  object-fit: cover;
+  filter: saturate(0.7);
+  display: block;
+}
+.vm-about-badge {
+  position: absolute;
+  bottom: -2rem;
+  right: -2rem;
+  background: var(--ink);
+  color: var(--ivory);
+  padding: 2rem 2.5rem;
+}
+.vm-about-badge-num {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 2.5rem;
+  font-weight: 600;
+  line-height: 1;
+  margin-bottom: 6px;
+}
+.vm-about-badge-label {
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  opacity: 0.5;
+  max-width: 160px;
+  line-height: 1.5;
+}
+.vm-about-body {
+  font-size: 15px;
+  color: var(--muted);
+  line-height: 1.75;
+  margin: 1.5rem 0 2.5rem;
+  letter-spacing: 0.01em;
+}
+.vm-checklist {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+.vm-checklist li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+.vm-check-icon {
+  color: #3b6b48;
+  flex-shrink: 0;
+}
+
+.vm-products-section {
+  padding: 8rem 0;
+  background: var(--warm);
+}
+.vm-products-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 4rem;
+}
+.vm-products-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2px;
+}
+.vm-product-card {
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+.vm-product-img-wrap {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 3/4;
+}
+.vm-product-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: saturate(0) brightness(0.95);
+  transition:
+    filter 0.6s ease,
+    transform 0.7s ease;
+  display: block;
+}
+.vm-product-card:hover .vm-product-img {
+  filter: saturate(0.9) brightness(1);
+  transform: scale(1.04);
+}
+.vm-product-tag {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background: var(--ivory);
+  color: var(--ink);
+  font-size: 8px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  padding: 5px 10px;
+}
+.vm-product-info {
+  padding: 1.25rem 0.75rem 1.5rem;
+  background: var(--warm);
+}
+.vm-product-name {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.15rem;
+  font-weight: 400;
+  color: var(--ink);
+  margin-bottom: 4px;
+  transition: color 0.2s;
+}
+.vm-product-card:hover .vm-product-name {
+  color: var(--bronze);
+}
+.vm-product-fabric {
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.vm-process-section {
+  padding: 8rem 0;
+  background: var(--ink);
+}
+.vm-process-header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: end;
+  margin-bottom: 5rem;
+}
+.vm-process-title {
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(2.8rem, 4vw, 4rem);
+  font-weight: 300;
+  color: var(--ivory);
+  line-height: 1.1;
+}
+.vm-process-desc {
+  font-size: 13px;
+  color: #a09890;
+  line-height: 1.75;
+  letter-spacing: 0.02em;
+  max-width: 400px;
+}
+.vm-process-steps {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0;
+}
+.vm-step {
+  padding: 2.5rem 2rem;
+  border-left: 1px solid rgba(255, 255, 255, 0.08);
+  transition: background 0.3s;
+  position: relative;
+}
+.vm-step:first-child {
+  border-left: none;
+}
+.vm-step:hover {
+  background: rgba(255, 255, 255, 0.04);
+}
+.vm-step-num {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 4rem;
+  font-weight: 300;
+  color: rgba(176, 141, 87, 0.2);
+  line-height: 1;
+  margin-bottom: 1.25rem;
+  display: block;
+}
+.vm-step-icon {
+  color: var(--bronze);
+  margin-bottom: 1rem;
+  width: 20px;
+  height: 20px;
+}
+.vm-step-title {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--ivory);
+  margin-bottom: 0.75rem;
+}
+.vm-step-desc {
+  font-size: 12px;
+  color: #706860;
+  line-height: 1.65;
+}
+
+.vm-gallery-section {
+  padding: 8rem 0;
+  background: var(--ivory);
+}
+.vm-gallery-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 0.6fr;
+  grid-template-rows: auto auto;
+  gap: 3px;
+  margin-top: 3rem;
+}
+.vm-gallery-main {
+  grid-row: 1 / 3;
+  height: 680px;
+  overflow: hidden;
+  position: relative;
+}
+.vm-gallery-main img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: saturate(0.5);
+  transition:
+    filter 0.6s,
+    transform 0.8s;
+}
+.vm-gallery-main:hover img {
+  filter: saturate(0.85);
+  transform: scale(1.02);
+}
+.vm-gallery-sm {
+  height: 338px;
+  overflow: hidden;
+}
+.vm-gallery-sm img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: saturate(0.5);
+  transition:
+    filter 0.6s,
+    transform 0.8s;
+}
+.vm-gallery-sm:hover img {
+  filter: saturate(0.85);
+  transform: scale(1.04);
+}
+.vm-gallery-caption {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 1.5rem;
+  background: rgba(246, 242, 235, 0.9);
+  backdrop-filter: blur(6px);
+  padding: 0.75rem 1rem;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--ink);
+}
+
+.vm-contact-section {
+  padding: 8rem 0;
+  background: var(--warm);
+}
+.vm-contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 6rem;
+  align-items: start;
+}
+.vm-contact-body {
+  font-size: 15px;
+  color: var(--muted);
+  line-height: 1.75;
+  margin: 1.5rem 0 3rem;
+}
+.vm-contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+  margin-bottom: 2rem;
+}
+.vm-contact-icon-wrap {
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--bronze);
+}
+.vm-contact-meta-label {
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 4px;
+}
+.vm-contact-meta-value {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--ink);
+  letter-spacing: 0.03em;
+}
+.vm-form {
+  background: var(--ivory);
+  border: 1px solid var(--border);
+  padding: 3rem;
+}
+.vm-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+.vm-form-group {
+  margin-bottom: 1.25rem;
+}
+.vm-label {
+  display: block;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 8px;
+}
+.vm-input,
+.vm-select,
+.vm-textarea {
+  width: 100%;
+  background: var(--warm);
+  border: 1px solid var(--border);
+  outline: none;
+  padding: 0.9rem 1rem;
+  font-family: "Jost";
+  font-size: 13px;
+  color: var(--ink);
+  transition: border-color 0.2s;
+}
+.vm-input:focus,
+.vm-select:focus,
+.vm-textarea:focus {
+  border-color: var(--bronze);
+}
+.vm-input::placeholder {
+  color: #b0a898;
+}
+.vm-textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+.vm-submit {
+  width: 100%;
+  background: var(--ink);
+  color: var(--ivory);
+  border: none;
+  cursor: pointer;
+  padding: 1.1rem 2rem;
+  font-family: "Jost";
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: background 0.25s;
+}
+.vm-submit:hover {
+  background: #3b6b48;
+}
+.vm-success {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 5rem 2rem;
+}
+.vm-success-icon {
+  width: 64px;
+  height: 64px;
+  background: #eef5eb;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #3b6b48;
+  margin-bottom: 1.5rem;
+}
+.vm-success h4 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+}
+.vm-success p {
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.vm-footer {
+  background: var(--ink);
+  padding: 6rem 0 3rem;
+}
+.vm-footer-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  gap: 4rem;
+  margin-bottom: 5rem;
+}
+.vm-footer-brand {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.1rem;
+  letter-spacing: 0.2em;
+  color: var(--ivory);
+  margin-bottom: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.vm-footer-mark {
+  width: 28px;
+  height: 28px;
+  background: var(--bronze);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.vm-footer-mark span {
+  font-family: "Jost";
+  font-size: 8px;
+  font-weight: 600;
+  color: var(--ink);
+  letter-spacing: 0.1em;
+}
+.vm-footer-tagline {
+  font-size: 12px;
+  color: #706860;
+  line-height: 1.75;
+  max-width: 260px;
+}
+.vm-footer-heading {
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: #504840;
+  margin-bottom: 1.5rem;
+}
+.vm-footer-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+.vm-footer-links button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: "Jost";
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #a09890;
+  transition: color 0.2s;
+}
+.vm-footer-links button:hover {
+  color: var(--ivory);
+}
+.vm-footer-certs {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.vm-cert {
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #504840;
+}
+.vm-footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  padding-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #504840;
+}
+.vm-footer-social {
+  display: flex;
+  gap: 2rem;
+}
+.vm-footer-social a {
+  color: #504840;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.vm-footer-social a:hover {
+  color: var(--bronze);
+}
+
+.vm-mobile-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: var(--ivory);
+  border-bottom: 1px solid var(--border);
+  padding: 1.5rem 2.5rem;
+}
+.vm-mobile-menu button {
+  display: block;
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: "Jost";
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--ink);
+  padding: 1rem 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+@media (max-width: 1024px) {
+  .vm-hero {
+    grid-template-columns: 1fr;
+  }
+  .vm-hero-left {
+    padding: 7rem 2rem 3rem;
+    min-height: 80vh;
+  }
+  .vm-hero-right {
+    height: 60vw;
+  }
+  .vm-about-grid {
+    grid-template-columns: 1fr;
+  }
+  .vm-about-badge {
+    right: 1rem;
+  }
+  .vm-products-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .vm-process-header {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .vm-process-steps {
+    grid-template-columns: 1fr 1fr;
+  }
+  .vm-contact-grid {
+    grid-template-columns: 1fr;
+  }
+  .vm-footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .vm-nav-links {
+    display: none;
+  }
+  .vm-hamburger {
+    display: block;
+  }
+}
+@media (max-width: 640px) {
+  .vm-section {
+    padding: 0 1.25rem;
+  }
+  .vm-products-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .vm-gallery-grid {
+    grid-template-columns: 1fr;
+  }
+  .vm-gallery-main {
+    height: 340px;
+    grid-row: auto;
+  }
+  .vm-gallery-sm {
+    height: 240px;
+  }
+  .vm-form {
+    padding: 1.75rem;
+  }
+  .vm-form-row {
+    grid-template-columns: 1fr;
+  }
+  .vm-footer-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+  .vm-process-steps {
+    grid-template-columns: 1fr;
+  }
+  .vm-hero-stats {
+    gap: 2rem;
+  }
+}
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.anim-in {
+  animation: fadeUp 0.7s ease forwards;
+}
+.delay-1 {
+  animation-delay: 0.1s;
+  opacity: 0;
+}
+.delay-2 {
+  animation-delay: 0.25s;
+  opacity: 0;
+}
+.delay-3 {
+  animation-delay: 0.4s;
+  opacity: 0;
+}
+.delay-4 {
+  animation-delay: 0.55s;
+  opacity: 0;
+}
+.delay-5 {
+  animation-delay: 0.7s;
+  opacity: 0;
+}
