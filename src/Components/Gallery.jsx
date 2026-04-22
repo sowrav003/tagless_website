@@ -21,11 +21,11 @@ const Gallery = () => {
             </div>
             <div className="vm-gallery-sm">
               <img src="https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?q=80&w=800&auto=format&fit=crop" alt="Print" />
-              <div className="vm-gallery-caption">Print & Embellishment</div>
+              
             </div>
             <div className="vm-gallery-sm">
               <img src="https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?q=80&w=800&auto=format&fit=crop" alt="Pack" />
-              <div className="vm-gallery-caption">Packaging & Labeling</div>
+              
             </div>
           </div>
         </div>

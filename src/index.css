@@ -93,7 +93,7 @@ body {
 }
 
 .vm-hero {
-  min-height: 80vh;
+  min-height: 90vh;
   display: grid;
   grid-template-columns: 1fr 1fr;
   overflow: hidden;
@@ -101,11 +101,12 @@ body {
 .vm-hero-left {
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
-  padding: 8rem 4rem 5rem 4rem;
+  justify-content: center;
+  padding: 8rem 2.5rem 4rem;
   background: var(--ivory);
   position: relative;
   z-index: 2;
+  ;
 }
 .vm-hero-eyebrow {
   font-family: "Jost";

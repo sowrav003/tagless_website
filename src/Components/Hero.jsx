@@ -9,7 +9,7 @@ const Hero = () => {
           Dhaka, Bangladesh — Est. 2008
         </p>
         <h1 className="vm-hero-title anim-in delay-2">
-          Build Your
+          Manufacture Your
           <br />
           <em>Clothing Brand</em>
           <br />
@@ -30,7 +30,7 @@ const Hero = () => {
             <Phone size={12} /> WhatsApp Us
           </button>
         </div>
-        <div className="vm-hero-stats anim-in delay-5">
+        {/* <div className="vm-hero-stats anim-in delay-5">
           {[
             ["500K+", "Units / Year"],
             ["18+", "Countries Served"],
@@ -41,7 +41,7 @@ const Hero = () => {
               <div className="vm-stat-label">{l}</div>
             </div>
           ))}
-        </div>
+        </div> */}
       </div>
       <div className="vm-hero-right">
         <img
