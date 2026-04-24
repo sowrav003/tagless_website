@@ -84,7 +84,7 @@ const Contact = () => {
               <div>
                 <div className="vm-contact-meta-label">CONTACT EMAIL</div>
                 <div className="vm-contact-meta-value">
-                  your@email.com
+                  tagless.official@gmail.com
                 </div>
               </div>
             </div>
@@ -96,7 +96,7 @@ const Contact = () => {
               <div>
                 <div className="vm-contact-meta-label">WHATSAPP</div>
                 <div className="vm-contact-meta-value">
-                  +880 1XXX-XXXXXX
+                  +880 1610-747629
                 </div>
               </div>
             </div>
@@ -152,7 +152,7 @@ const Contact = () => {
                       name="whatsapp"
                       required
                       className="vm-input"
-                      placeholder="+880..."
+                      placeholder="+880 1610-747629"
                       type="tel"
                     />
                   </div>

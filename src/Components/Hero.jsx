@@ -2,6 +2,16 @@ import { ArrowRight, Phone } from "lucide-react";
 import React from "react";
 
 const Hero = () => {
+  const handleclick = () => {
+    window.open("https://wa.me/8801610747629", "_blank");
+  };
+
+  const scrollTo = (id) => {
+    const el = document.getElementById(id);
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   return (
     <section id="home" className="vm-hero">
       <div className="vm-hero-left">
@@ -26,7 +36,7 @@ const Hero = () => {
           >
             Get a Quote <ArrowRight size={14} />
           </button>
-          <button className="vm-btn-secondary">
+          <button onClick={handleclick} className="vm-btn-secondary">
             <Phone size={12} /> WhatsApp Us
           </button>
         </div>
