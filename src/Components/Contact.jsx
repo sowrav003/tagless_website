@@ -152,7 +152,7 @@ const Contact = () => {
                       name="whatsapp"
                       required
                       className="vm-input"
-                      placeholder="+880 1610-747629"
+                      placeholder="+880 1xxxxxxxxx"
                       type="tel"
                     />
                   </div>
